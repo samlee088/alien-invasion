@@ -10,6 +10,7 @@ class Settings:
 
         # Ship settings
         self.ship_speed = 15
+        self.ship_limit = 3
 
         # Bullet settings
         self.bullet_speed = 2.0
@@ -23,3 +24,5 @@ class Settings:
         self.fleet_drop_speed = 10
         # fleet direction of 1 represents right: -1 represents left.
         self.fleet_direction = 1
+
+        
