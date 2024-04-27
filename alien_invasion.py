@@ -7,6 +7,7 @@ from ship import Ship
 from bullet import Bullet
 from alien import Alien
 from game_stats import GameStats
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior"""
 
@@ -135,9 +136,10 @@ class AlienInvasion:
 
         # Look for alien-ship collisions
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
-            self._ship_hit
+            self._ship_hit()
+
         # Look for aliens hitting the bottom of the screen
-            self._check_aliens_bottom()
+        # self._check_aliens_bottom()
 
     def _check_fleet_edges(self):
         """Respond appropriately if any aliens have reached an edge."""
@@ -145,7 +147,6 @@ class AlienInvasion:
             if alien.check_edges():
                 self._change_fleet_directions()
                 break
-
 
     def _change_fleet_directions(self):
         """Drop the entire fleet and change the fleet's direction."""
